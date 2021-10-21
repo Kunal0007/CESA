@@ -1,0 +1,15 @@
+body{
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-size: cover;
+}
+
+.home {
+    display: flex;
+    /* align-items: center; */
+}
+
+.heading {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
