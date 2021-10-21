@@ -19,7 +19,7 @@ const Product = (props) => {
         <>
             <div className="container_p">
                 <div className="prouct_img">
-                    <img src={product.image} alt="" width="150px"/>
+                    <img src={product.image} alt="" width="170px" height="170px"/>
                 </div>
                 <div className="product_name">
                     <h3>{product.name}</h3>
@@ -29,9 +29,9 @@ const Product = (props) => {
                         <h2>{product.price}</h2>
                     </div>
                     <div className="buttons">
-                        <button className="quantity__btn" onClick={() => {remove(product); decrement();}} >-</button>
+                        <button className="quantity__btn" disabled={quantity <= 0} onClick={() => {remove(product); decrement(); }} >-</button>
                         <span className="quantity">{quantity < 0 ? 0 : quantity}</span>
-                        <button className="quantity__btn" onClick={() => {add(product); increment();}}>+</button>
+                        <button className="quantity__btn" onClick={() => {add(product); increment(); }}>+</button>
                     </div>
                 </div>
             </div>

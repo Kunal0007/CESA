@@ -21,11 +21,10 @@ body {
 .quantity__btn {
   background-color: rgb(99, 214, 21);
   padding: 0.2rem 0.8rem;
-  margin: 1px;
+  margin: 2px;
   border-style: none;
   border-radius: 0.8rem;
-  font-family: var(--body-font);
-  font-weight: var(--font-medium);
+  font-size: 1rem;
 }
 
 .quantity__btn:hover {

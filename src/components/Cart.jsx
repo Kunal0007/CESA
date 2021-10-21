@@ -1,10 +1,24 @@
-import React from 'react'
+import {React, useState, useEffect} from 'react'
 import './Cart.css'
 const Cart = (props) => {
 
     const {cart} = props;
 
-    var total = 0;
+    const [total, setTotal] = useState(0);
+
+    const getTotal = () => {
+        setTotal(0);
+        var sum = 0
+        for (let i = 0; i < cart.length; i++) {
+            sum = sum + cart[i].total;
+        }
+        setTotal(sum);
+    }
+
+    useEffect(() => {
+        getTotal();
+    }, [cart]);
+    
 
     return (
         <>
@@ -17,10 +31,8 @@ const Cart = (props) => {
                     <h3>{item.name} = {item.price} * {item.qty}</h3>
                 ))}
             </div>
-            <div>
-                {/* <h2>Total: {cart.map((item, i) => (
-                    total += 
-                ))} </h2> */}
+            <div style={{textAlign: 'center'}}>
+                <h2>Total: {total}</h2>
             </div>
         </div>
            
